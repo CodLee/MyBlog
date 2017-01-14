@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>A_one</title>
+	<link rel="favicon" href="./img/">
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<script src='./js/jquery-1.11.3.min.js'></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="./css/login.css">
+	<style>
+		body{
+			background: url(./img/login-background.jpg) no-repeat center center fixed;
+			-webkit-background-size: cover;
+			background-size: cover;
+		}
+		.wrapper{
+			width: 750px;margin: 10% auto;
+		}
+		form{border: 1px solid rgba(255,255,255,0.4);border-radius:3px;padding: 10px 30px;background: rgba(255,255,255,.3);}
+		form h2{font-size: 24px;font-weight: bold;color:#fff;}
+		form .form-group{position: relative;}
+		form .glyphicon{position: absolute;right: 8px;top: 8px;}
+		.footer{margin-top: 20px;border-top: 1px solid rgba(255,255,255,0.4);padding-top: 15px;color:#fff;}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+			<form action="">
+				<h2>管理员登录</h2>
+				<div class="form-group">
+					<input type="text" placeholder='请输入用户名' class="form-control">
+					<span class="glyphicon glyphicon-user"></span>
+				</div>
+				<div class="form-group">
+					<input type="password" placeholder='请输入密码' class='form-control'>
+					<span class="glyphicon glyphicon-lock"></span>
+				</div>
+				<p><a href="">忘记密码了</a></p>
+				<div class="form-group">
+					<button class="btn btn-primary btn-block">登录</button>
+				</div>	
+			</form>
+			</div>
+		</div>
+		<p class='footer text-center'>
+			@ 2016 All rights Reserved. A_one
+		</p>
+	</div>
+	
+</body>
+</html>

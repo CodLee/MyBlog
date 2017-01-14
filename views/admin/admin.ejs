@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>A_one--首页</title>
+	<link rel="favicon" href="./img/">
+	<!-- 视口设置 -->
+	<meta name='viewport' content='width=device-width,initial-scale=1,user-scalable=no'>
+	<!-- 引入 bootstrap核心文件 -->
+<!-- 相对路径  ./  与 / 的区别 -->
+
+
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<script src='/js/jquery-1.11.3.min.js'></script>
+	<script src="/js/bootstrap.min.js"></script>
+
+	<style>
+		.header{background: skyblue;}
+		.header .navbar-brand{width: 220px;background: #00d;color:#f9f9f9;font-size: 28px;
+			font-family: '微软雅黑';text-align: center;max-height: 50px;}
+		.open>.dropdown-toggle{background: #00d!important;}
+		.header .navbar-brand:hover{background:#00e;color:#f9f9f9;}
+
+		.nav-user{margin-right:15px;display: inline-block;float: right;height: 50px;}
+		.nav-user>li{display: inline-block;position: relative;}
+		.nav-user>li .dropdown-menu{position: absolute;box-shadow: 0 0 2px rgba(0,0,0,0.5)!important;}
+
+
+		.nav-user .dropdown-toggle{color:#fff!important;}
+		.nav-user .dropdown-menu{width: 280px;}
+
+		.nav-user .user-info{background: #00d;text-align: center;padding: 20px 0;}
+		.nav-user .user-info img{width: 90px;height: 90px;}
+		.nav-user .user-info p{color:#fff;line-height: 25px;}
+		.nav-user .user-link{padding: 15px 10px;text-align: center;}
+		.nav-user .user-link a{display: inline-block;}
+
+		.menu{width: 220px;background: #eee;position: absolute;top: 50px;left: 0;}
+
+		.main{margin-left: 220px;}
+		.user-status{padding: 15px 10px;}
+		.user-status>div{margin-right: 10px;}
+
+		.menu form{margin: 5px 10px;}
+		.menu form .form-group{position: relative;}
+		.menu form .glyphicon{position: absolute; right: 8px;top: 8px;color:#999;}
+		.menu .list-group-item{border: 0 none;background: #eee;}
+		.outer>.list-group-item{border: 1px solid #ddd;}
+
+		.navbar-header{float: left;height: 100%;}
+		.menu-sw{display: block;float: left;margin-left: 10px;}
+	</style>
+</head>
+<body>
+<!-- 顶部导航栏 -->
+	<nav class="navbar navbar-default navbar-static-top header">
+		<div class="navbar-header">
+			<a href="" class="navbar-brand">
+				A_one
+			</a>
+		</div>
+		<div class="menu-sw navbar-toggle">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</div>
+		<ul class="navbar-right navbar-nav nav nav-user">
+			<li>
+				<a href="" class="dropdown dropdown-toggle" data-toggle='dropdown'>
+					<span class="glyphicon glyphicon-user"></span> blog 
+					<span class="caret"></span>
+				</a>
+				<ul class='dropdown-menu '>
+					<li class='user-info'>
+						<img src='/img/avatar04.png' alt="" class='img-circle'>
+						<p>A_one IT 技术 <br><small> Just do  IT </small></p>
+					</li>
+					<li class='user-link'>
+						<a class="btn btn-default">用户中心</a> 
+						<a class="btn btn-default">注销登录</a> 
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+<!-- 右边菜单栏 -->
+	<div class="menu">
+		<div class="user-status clearfix">
+			<div class="pull-left">
+				<img src="../img/avatar04.png" alt="头像" class='img-circle' style='width:45px;height:45px;'>
+			</div>
+			<div class="pull-left">
+				<p>Hello,Single dog! <br><a href="">在线</a></p>
+			</div>
+		</div>
+		<form action="">
+			<div class="form-group">
+				<input type="text" placeholder='操作' class='form-control'>
+				<span class="glyphicon glyphicon-search"></span>
+			</div>
+		</form>
+
+		<!-- list-group -->
+		<ul class="list-group outer">
+			<li class="list-group-item">
+				<a href="">
+					<span class="glyphicon glyphicon-dashboard"></span>
+					控制台
+					<!-- <span class="glyphicon glyphicon-chevron-right pull-right"></span> -->
+				</a>
+			</li>
+			<li class='list-group-item'>
+				<a href="#cats" data-toggle='collapse'>
+					<span class='glyphicon glyphicon-th-large'></span>
+					分类
+					<span class='glyphicon glyphicon-chevron-down pull-right'></span>
+				</a>
+				<ul class="list-group collapse" id='cats'>
+					<li class='list-group-item'>
+						<a href="">
+							<span class="glyphicon glyphicon-list"></span>
+							分类列表
+						</a>
+					</li>
+					<li class="list-group-item">
+						<a href="">
+							<span class="glyphicon glyphicon-plus"></span>
+							分类添加
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li class='list-group-item'>
+				<a href="#posts" data-toggle='collapse'>
+					<span class='glyphicon glyphicon-file'></span>
+					文章
+					<span class='glyphicon glyphicon-chevron-down pull-right'></span>
+				</a>
+				<ul class="list-group collapse" id='posts'>
+					<li class='list-group-item'>
+						<a href="">
+							<span class="glyphicon glyphicon-list"></span>
+							文章列表
+						</a>
+					</li>
+					<li class="list-group-item">
+						<a href="">
+							<span class="glyphicon glyphicon-plus"></span>
+							文章添加
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li class='list-group-item'>
+				<a href="#tag" data-toggle='collapse'>
+					<span class='glyphicon glyphicon-tag'></span>
+					标签
+					<span class='glyphicon glyphicon-chevron-down pull-right'></span>
+				</a>
+				<ul class="list-group collapse" id='tag'>
+					<li class='list-group-item'>
+						<a href="">
+							<span class="glyphicon glyphicon-list"></span>
+							标签列表
+						</a>
+					</li>
+					<li class="list-group-item">
+						<a href="">
+							<span class="glyphicon glyphicon-plus"></span>
+							标签添加
+						</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<script>
+		//注册窗口大小改变事件，右侧菜单栏满屏高
+		$(window).on('resize',function(){
+			setHeight();
+		});
+		setHeight();
+		function setHeight(){
+			$('.menu').css({'min-height':$(window).height()-52});
+		}
+		// 注册ul  list-group-item 隐藏、显示结束事件
+		$('ul.list-group.collapse').on('hide.bs.collapse',function(){
+			// 找到对应的a标签中的i，将down改为up
+			$(this).prev().find('.pull-right').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+		});
+		$('ul.list-group.collapse').on('shown.bs.collapse',function(){
+			// 找到对应的a标签中的i，将down改为up
+			$(this).prev().find('.pull-right').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+		});
+		/*$('ul.list-group.collapse').on('hide.bs.collapse',function(){
+			// 找到对应的a标签中的i，将down改为up
+			$(this).prev().find('.pull-right').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+		});
+		$('ul.list-group.collapse').on('show.bs.collapse',function(){
+			// 找到对应的a标签中的i，将down改为up
+			$(this).prev().find('.pull-right').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+		});*/
+
+	</script>
+<!-- 主体 main -->
+	<div class="main">
+		这是主体部分
+	</div>
+</body>
+</html>
